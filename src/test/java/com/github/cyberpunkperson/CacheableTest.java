@@ -1,12 +1,14 @@
 package com.github.cyberpunkperson;
 
 
+import com.github.cyberpunkperson.callback.ExecutionTimeExtension;
 import com.github.cyberpunkperson.dto.InnerObject;
 import com.github.cyberpunkperson.dto.NotSerializableInnerObject;
 import com.github.cyberpunkperson.dto.NotSerializableRequestObject;
 import com.github.cyberpunkperson.dto.RequestObject;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 import java.io.NotSerializableException;
 import java.util.List;
@@ -15,6 +17,7 @@ import static com.github.cyberpunkperson.dto.State.DISABLE;
 import static com.github.cyberpunkperson.dto.State.ENABLE;
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith(ExecutionTimeExtension.class)
 public class CacheableTest {
 
 
